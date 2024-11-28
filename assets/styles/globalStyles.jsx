@@ -39,7 +39,11 @@ const globalStyles = StyleSheet.create({
         color: '#FFFFFF',
         fontSize: 6,
         fontFamily: 'Inter-SemiBold',
-    }
+    },
+    userStoryContainer: {
+        marginTop: 20,
+        marginHorizontal: 10,
+    },
 });
 
 export default globalStyles;
