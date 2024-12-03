@@ -1,5 +1,3 @@
-import profile from './assets/images/default_profile.png'
-
 const userStoryData = [
     {
         id: 1,
@@ -46,6 +44,176 @@ const userStoryData = [
         firstName: 'Ethan',
         profileImage: require('./assets/images/default_profile.png'),
     },
+    {
+        id: 10,
+        firstName: 'Sophia',
+        profileImage: require('./assets/images/default_profile.png'),
+    },
+    {
+        id: 11,
+        firstName: 'Liam',
+        profileImage: require('./assets/images/default_profile.png'),
+    },
+    {
+        id: 12,
+        firstName: 'Mia',
+        profileImage: require('./assets/images/default_profile.png'),
+    },
+    {
+        id: 13,
+        firstName: 'Daniel',
+        profileImage: require('./assets/images/default_profile.png'),
+    },
+    {
+        id: 14,
+        firstName: 'Grace',
+        profileImage: require('./assets/images/default_profile.png'),
+    },
+    {
+        id: 15,
+        firstName: 'Lucas',
+        profileImage: require('./assets/images/default_profile.png'),
+    },
+    {
+        id: 16,
+        firstName: 'Isabella',
+        profileImage: require('./assets/images/default_profile.png'),
+    },
+    {
+        id: 17,
+        firstName: 'William',
+        profileImage: require('./assets/images/default_profile.png'),
+    },
+    {
+        id: 18,
+        firstName: 'Charlotte',
+        profileImage: require('./assets/images/default_profile.png'),
+    },
+    {
+        id: 19,
+        firstName: 'Benjamin',
+        profileImage: require('./assets/images/default_profile.png'),
+    },
+    {
+        id: 20,
+        firstName: 'Amelia',
+        profileImage: require('./assets/images/default_profile.png'),
+    },
 ];
 
-export default userStoryData;
+
+const userPostData = [
+    {
+        firstName: 'Allison',
+        lastName: 'Becker',
+        location: 'Boston, MA',
+        likes: 1201,
+        comments: 24,
+        bookmarks: 55,
+        image: require('./assets/images/default_post.png'),
+        profileImage: require('./assets/images/default_profile.png'),
+        id: 1,
+    },
+    {
+        firstName: 'John',
+        lastName: 'Doe',
+        location: 'New York, NY',
+        likes: 500,
+        comments: 30,
+        bookmarks: 12,
+        image: require('./assets/images/default_post.png'),
+        profileImage: require('./assets/images/default_profile.png'),
+        id: 2,
+    },
+    {
+        firstName: 'Sara',
+        lastName: 'Smith',
+        location: 'Los Angeles, CA',
+        likes: 800,
+        comments: 15,
+        bookmarks: 20,
+        image: require('./assets/images/default_post.png'),
+        profileImage: require('./assets/images/default_profile.png'),
+        id: 3,
+    },
+    {
+        firstName: 'Tom',
+        lastName: 'Johnson',
+        location: 'Chicago, IL',
+        likes: 1500,
+        comments: 40,
+        bookmarks: 30,
+        image: require('./assets/images/default_post.png'),
+        profileImage: require('./assets/images/default_profile.png'),
+        id: 4,
+    },
+    {
+        firstName: 'Emily',
+        lastName: 'Davis',
+        location: 'Seattle, WA',
+        likes: 1100,
+        comments: 35,
+        bookmarks: 10,
+        image: require('./assets/images/default_post.png'),
+        profileImage: require('./assets/images/default_profile.png'),
+        id: 5,
+    },
+    {
+        firstName: 'Chris',
+        lastName: 'Martinez',
+        location: 'Austin, TX',
+        likes: 900,
+        comments: 50,
+        bookmarks: 25,
+        image: require('./assets/images/default_post.png'),
+        profileImage: require('./assets/images/default_profile.png'),
+        id: 6,
+    },
+    {
+        firstName: 'Sophia',
+        lastName: 'Taylor',
+        location: 'Miami, FL',
+        likes: 1300,
+        comments: 20,
+        bookmarks: 15,
+        image: require('./assets/images/default_post.png'),
+        profileImage: require('./assets/images/default_profile.png'),
+        id: 7,
+    },
+    {
+        firstName: 'Michael',
+        lastName: 'Brown',
+        location: 'San Francisco, CA',
+        likes: 1400,
+        comments: 60,
+        bookmarks: 40,
+        image: require('./assets/images/default_post.png'),
+        profileImage: require('./assets/images/default_profile.png'),
+        id: 8,
+    },
+    {
+        firstName: 'Jessica',
+        lastName: 'Wilson',
+        location: 'Denver, CO',
+        likes: 650,
+        comments: 12,
+        bookmarks: 18,
+        image: require('./assets/images/default_post.png'),
+        profileImage: require('./assets/images/default_profile.png'),
+        id: 9,
+    },
+    {
+        firstName: 'David',
+        lastName: 'Andersun',
+        location: 'Portland, OR',
+        likes: 750,
+        comments: 25,
+        bookmarks: 50,
+        image: require('./assets/images/default_post.png'),
+        profileImage: require('./assets/images/default_profile.png'),
+        id: 10,
+    },
+];
+
+
+export default {userStoryData, userPostData};
