@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import {
   FlatList,
   SafeAreaView,
-  ScrollView,
   Text,
   TouchableOpacity,
   View,
@@ -17,6 +16,7 @@ import globalStyles from './assets/styles/globalStyles';
 import UserStories from './components/UserStories/UserStories';
 import UserPost from './components/UserPost/UserPost';
 import userSampleData from './sample_data';
+import { scaleFontSize } from './assets/styles/scaling';
 
 const App = () => {
 
@@ -25,10 +25,10 @@ const App = () => {
   const [userStoriesRenderedData, setUserStoriesRenderedData] = useState([]);
   const [isLoadingUserStories, setIsLoadingUserStories] = useState(false);
 
-  const userPostPageSize = 3;
+  const userPostPageSize = 2;
   const [userPostCurrentPage, setUserPostCurrentPage] = useState(1);
   const [userPostRenderedData, setUserPostRenderedData] = useState([]);
-  const [isLoadingUserPosts, setIsLoadingUserPosts] = useState(false)
+  const [isLoadingUserPosts, setIsLoadingUserPosts] = useState(false);
 
   const pagination = (database, currentPage, pageSize) => {
     const startIndex = (currentPage - 1) * pageSize;
@@ -58,7 +58,7 @@ const App = () => {
             <View style={globalStyles.header}>
               <Title title="Let’s Explore" />
               <TouchableOpacity style={globalStyles.messageContainer} onPress={() => { console.log('message clicked'); }}>
-                <FontAwesomeIcon icon={faEnvelope} size={20} color={'#898DAE'} />
+                <FontAwesomeIcon icon={faEnvelope} size={scaleFontSize(24)} color={'#898DAE'} />
                 <View style={globalStyles.messageCountContainer}>
                   <Text style={globalStyles.messageCount}>
                     2
@@ -104,7 +104,7 @@ const App = () => {
             if (isLoadingUserPosts) {
               return;
             }
-            setIsLoadingUserPosts(true)
+            setIsLoadingUserPosts(true);
             const postToAppend = pagination(userSampleData.userPostData, userPostCurrentPage + 1, userPostPageSize);
             if (postToAppend.length > 0) {
               setUserPostCurrentPage(userPostCurrentPage + 1);

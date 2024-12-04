@@ -1,8 +1,9 @@
 import { StyleSheet } from 'react-native';
+import { scaleFontSize } from '../../assets/styles/scaling';
 
 const style = StyleSheet.create({
     title: {
-        fontSize: 24,
+        fontSize: scaleFontSize(34),
         fontFamily: 'Inter-SemiBold',
         color: '#022150',
 

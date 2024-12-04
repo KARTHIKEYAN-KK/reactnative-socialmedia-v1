@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { horizontalScale, scaleFontSize, verticalScale } from '../../assets/styles/scaling';
 
 const style = StyleSheet.create({
     userContainer: {
@@ -6,7 +7,7 @@ const style = StyleSheet.create({
     },
     userTextContainer: {
         justifyContent: 'center',
-        marginLeft: 10,
+        marginLeft: horizontalScale(10),
     },
     userMainContainer: {
         flexDirection: 'row',
@@ -16,23 +17,23 @@ const style = StyleSheet.create({
     username: {
         color: '#000',
         fontFamily: 'Inter-SemiBold',
-        fontSize: 16,
+        fontSize: scaleFontSize(20),
     },
     location: {
         color: '#79869F',
         fontFamily: 'Inter-ExtraLight',
-        fontSize: 12,
-        marginTop: 2,
+        fontSize: scaleFontSize(14),
+        marginTop: verticalScale(1),
     },
     userPostContainer: {
-        marginTop: 35,
-        borderBottomWidth: 1,
-        paddingBottom: 20,
+        marginTop: verticalScale(20),
+        borderBottomWidth: verticalScale(1),
+        paddingBottom: verticalScale(15),
         borderBottomColor: '#EFF2F6',
     },
     postImageContainer: {
         alignItems: 'center',
-        marginVertical: 10,
+        marginVertical: verticalScale(10),
     },
     postImage: {
         resizeMode: 'contain',
@@ -41,19 +42,19 @@ const style = StyleSheet.create({
     bookmarksContainer: {
         flexDirection: 'row',
         alignItems: 'center',
-        marginLeft: 27,
+        marginLeft: horizontalScale(26),
     },
     bookmarksText: {
-        marginLeft: 3,
+        marginLeft: horizontalScale(3),
         color: '#79869F',
     },
     commentsContainer: {
         flexDirection: 'row',
         alignItems: 'center',
-        marginLeft: 27,
+        marginLeft: horizontalScale(26),
     },
     commentsText: {
-        marginLeft: 3,
+        marginLeft: horizontalScale(3),
         color: '#79869F',
     },
     likesContainer: {
@@ -61,11 +62,11 @@ const style = StyleSheet.create({
         alignItems: 'center',
     },
     likesText: {
-        marginLeft: 3,
+        marginLeft: horizontalScale(3),
         color: '#79869F',
     },
     userPostStats: {
-        marginLeft: 10,
+        marginLeft: horizontalScale(10),
         flexDirection: 'row',
     },
 });
