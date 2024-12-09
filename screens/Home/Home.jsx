@@ -58,7 +58,7 @@ const Home = ({navigation}) => {
                     ListHeaderComponent={<>
                         <View style={style.header}>
                             <Title title="Let’s Explore" />
-                            <TouchableOpacity style={style.messageContainer} onPress={() => {navigation.navigate(Routes.Profile)}}>
+                            <TouchableOpacity style={style.messageContainer} onPress={() => {navigation.navigate(Routes.Profile);}}>
                                 <FontAwesomeIcon icon={faEnvelope} size={scaleFontSize(24)} color={'#898DAE'} />
                                 <View style={style.messageCountContainer}>
                                     <Text style={style.messageCount}>
