@@ -7,6 +7,7 @@ import Profile from '../screens/Profile/Profile';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import ProfileTabTitle from '../components/ProfileTabTitle/ProfileTabTitle';
+import ProfileTabContent from '../components/ProfileTabContent/ProfileTabContent';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -57,23 +58,23 @@ export const ProfileTabsNavigation = () => {
                 name="Tab1"
                 options={{
                     tabBarLabel: renderTabLabel('Photos'),
-                }}
-                component={Tab1}
-            />
+                }}>
+                {(props) => <ProfileTabContent {...props} tabName={'Tab1'} />}
+            </ProfileTabsNav.Screen>
             <ProfileTabsNav.Screen
                 name="Tab2"
                 options={{
                     tabBarLabel: renderTabLabel('Videos'),
-                }}
-                component={Tab2}
-            />
+                }}>
+                {(props) => <ProfileTabContent {...props} tabName={'Tab2'} />}
+            </ProfileTabsNav.Screen>
             <ProfileTabsNav.Screen
                 name="Tab3"
                 options={{
                     tabBarLabel: renderTabLabel('Saved'),
-                }}
-                component={Tab3}
-            />
+                }}>
+                {(props) => <ProfileTabContent {...props} tabName={'Tab3'} />}
+            </ProfileTabsNav.Screen>
         </ProfileTabsNav.Navigator>
     );
 };
