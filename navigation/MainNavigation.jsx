@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, ScrollView, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Routes } from './Routes';
 import Home from '../screens/Home/Home';
@@ -79,15 +79,38 @@ export const ProfileTabsNavigation = () => {
     );
 };
 
+// Custom Drawer Content Component
+const CustomDrawerContent = (props) => {
+    return (
+        <ScrollView style={styles.drawerContent}>
+            <Image
+                source={{ uri: 'https://via.placeholder.com/300x150.png?text=Your+Image' }} // Sample placeholder image URL
+                style={styles.rectangleImage}
+            />
+            {props.state.routes.map((route, index) => (
+                <TouchableOpacity key={index} style={styles.drawerItems}
+                    onPress={() => props.navigation.navigate(route.name)}>
+                    <Text style={styles.drawerItem}>
+                        {route.name}
+                    </Text>
+                </TouchableOpacity>
+            ))}
+        </ScrollView>
+    );
+};
+
 
 const MainMenuNavigation = () => {
     return (
-        <Drawer.Navigator initialRouteName={Routes.Profile}>
+        <Drawer.Navigator
+            initialRouteName={Routes.Profile}
+            drawerContent={(props) => <CustomDrawerContent {...props} />}
+        >
             <Drawer.Screen
                 name={Routes.Home}
                 component={Home}
                 options={{
-                    headerShown: false,
+                    headerShown: true,
                     headerTitle: 'Dashbord',
                 }}
             />
@@ -95,7 +118,7 @@ const MainMenuNavigation = () => {
                 name={Routes.Profile}
                 component={Profile}
                 options={{
-                    headerShown: false,
+                    headerShown: true,
                     headerTitle: 'My Profile',
                 }}
             />
@@ -111,3 +134,28 @@ const MainNavigation = () => {
 };
 
 export default MainNavigation;
+
+const styles = StyleSheet.create({
+    drawerContent: {
+        flex: 1,
+        // paddingTop: 20, // Adjust for space if needed
+        // paddingHorizontal: 20,
+    },
+    rectangleImage: {
+        width: '100%',
+        height: 150,  // Adjust height and width as needed for a rectangle image
+        marginBottom: 10,
+    },
+    drawerItems: {
+        paddingTop: 0,
+        paddingHorizontal: 20,
+        marginTop: 5,
+    },
+    drawerItem: {
+        fontSize: 18,
+        marginVertical: 10,
+        padding: 10,
+        backgroundColor: '#f0f0f0',
+        borderRadius: 5,
+    },
+});

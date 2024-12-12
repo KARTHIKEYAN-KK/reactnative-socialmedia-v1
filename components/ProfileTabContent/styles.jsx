@@ -8,13 +8,15 @@ const styles = StyleSheet.create({
     profileTabconainer: {
         flexDirection: 'row',
         flexWrap: 'wrap',
-        paddingHorizontal: horizontalScale(20),
+        paddingHorizontal: horizontalScale(21),
         justifyContent: 'space-between',
     },
     image: {
+        // backgroundColor: 'red',
         width: horizontalScale(140),
-        height: verticalScale(90),
+        height: verticalScale(75.5),
         resizeMode: 'contain',
+        marginTop: verticalScale(11),
     },
 
 });

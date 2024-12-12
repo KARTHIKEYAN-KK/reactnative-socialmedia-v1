@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
     ProfileImageContainer: {
         flexDirection: 'row',
         justifyContent: 'center',
-        marginTop: verticalScale(55),
+        marginTop: verticalScale(25),
     },
     userName: {
         marginTop: verticalScale(15),
